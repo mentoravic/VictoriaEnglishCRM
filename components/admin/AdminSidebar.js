@@ -212,14 +212,14 @@ export default function AdminSidebar({ user }) {
       {/* Desktop Sidebar */}
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col bg-white border-r border-gray-200">
         {/* Logo — fixed height, never shrinks */}
-        <div className="flex h-16 shrink-0 items-center px-6 border-b border-gray-100">
+        <div className="flex h-24 shrink-0 items-center px-5 border-b border-gray-100">
           <Link href="/admin" className="flex items-center gap-3">
             <Image
               src="/mentora.png"
               alt="Mentora"
               width={2125}
               height={740}
-              className="h-9 w-auto shrink-0 object-contain"
+              className="h-20 w-auto shrink-0 object-contain"
               priority
             />
           </Link>
@@ -312,7 +312,7 @@ export default function AdminSidebar({ user }) {
         style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
       >
         {/* Header cu close button */}
-        <div className="flex items-center justify-between h-14 px-3 border-b border-gray-200 shrink-0">
+        <div className="flex items-center justify-between h-20 px-3 border-b border-gray-200 shrink-0">
           <Link
             href="/admin"
             className="flex items-center gap-2"
@@ -323,7 +323,7 @@ export default function AdminSidebar({ user }) {
               alt="Mentora"
               width={2125}
               height={740}
-              className="h-8 w-auto shrink-0 object-contain"
+              className="h-16 w-auto shrink-0 object-contain"
             />
           </Link>
           <button

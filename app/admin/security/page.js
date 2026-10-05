@@ -1,6 +1,7 @@
 'use client'
 
 import TelegramConnect from '@/components/TelegramConnect'
+import ChangePasswordCard from '@/components/ChangePasswordCard'
 import MetaLeadsToggle from '@/components/admin/MetaLeadsToggle'
 import DatabaseBackup from '@/components/admin/DatabaseBackup'
 import { useState, useEffect } from 'react'
@@ -435,6 +436,11 @@ export default function SecurityPage() {
             </div>
           )}
         </div>
+      </div>
+
+      {/* Schimbare parolă */}
+      <div className="mt-6">
+        <ChangePasswordCard />
       </div>
 
       {/* Telegram */}

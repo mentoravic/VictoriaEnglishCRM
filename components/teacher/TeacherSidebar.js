@@ -126,14 +126,14 @@ export default function TeacherSidebar() {
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
         <div className="flex flex-col flex-grow bg-white border-r border-gray-200">
           {/* Logo Section */}
-          <div className="flex items-center h-16 px-6 border-b border-gray-200">
+          <div className="flex items-center h-24 px-5 border-b border-gray-200">
             <Link href="/teacher/groups" className="flex items-center gap-3">
               <Image
                 src="/mentora.png"
                 alt="Mentora"
                 width={2125}
                 height={740}
-                className="h-9 w-auto shrink-0 object-contain"
+                className="h-[4.5rem] w-auto shrink-0 object-contain"
               />
             </Link>
           </div>
@@ -234,7 +234,7 @@ export default function TeacherSidebar() {
         mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         {/* Header cu close button */}
-        <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
+        <div className="flex items-center justify-between h-20 px-4 border-b border-gray-200">
           <Link
             href="/teacher"
             className="flex items-center gap-3"
@@ -245,7 +245,7 @@ export default function TeacherSidebar() {
               alt="Mentora"
               width={2125}
               height={740}
-              className="h-9 w-auto shrink-0 object-contain"
+              className="h-14 w-auto shrink-0 object-contain"
             />
           </Link>
           <button
