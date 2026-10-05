@@ -215,10 +215,10 @@ export default function AdminSidebar({ user }) {
         <div className="flex h-16 shrink-0 items-center px-6 border-b border-gray-100">
           <Link href="/admin" className="flex items-center gap-3">
             <Image
-              src="/olla-english.png"
-              alt="Olla English"
-              width={342}
-              height={103}
+              src="/mentora.png"
+              alt="Mentora"
+              width={2125}
+              height={740}
               className="h-9 w-auto shrink-0 object-contain"
               priority
             />
@@ -319,10 +319,10 @@ export default function AdminSidebar({ user }) {
             onClick={() => setMobileMenuOpen(false)}
           >
             <Image
-              src="/olla-english.png"
-              alt="Olla English"
-              width={342}
-              height={103}
+              src="/mentora.png"
+              alt="Mentora"
+              width={2125}
+              height={740}
               className="h-8 w-auto shrink-0 object-contain"
             />
           </Link>

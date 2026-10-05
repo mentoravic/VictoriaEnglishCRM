@@ -59,7 +59,7 @@ export async function GET(request) {
 
       const result = await callTelegram('sendMessage', {
         chat_id: user.telegramChatId,
-        text: `✅ Test Olla English CRM — mesajele private ajung la ${user.name}.`,
+        text: `✅ Test Mentora CRM — mesajele private ajung la ${user.name}.`,
         parse_mode: 'HTML',
       })
 

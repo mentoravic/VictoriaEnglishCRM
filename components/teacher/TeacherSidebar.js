@@ -129,10 +129,10 @@ export default function TeacherSidebar() {
           <div className="flex items-center h-16 px-6 border-b border-gray-200">
             <Link href="/teacher/groups" className="flex items-center gap-3">
               <Image
-                src="/olla-english.png"
-                alt="Olla English"
-                width={342}
-                height={103}
+                src="/mentora.png"
+                alt="Mentora"
+                width={2125}
+                height={740}
                 className="h-9 w-auto shrink-0 object-contain"
               />
             </Link>
@@ -241,10 +241,10 @@ export default function TeacherSidebar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             <Image
-              src="/olla-english.png"
-              alt="Olla English"
-              width={342}
-              height={103}
+              src="/mentora.png"
+              alt="Mentora"
+              width={2125}
+              height={740}
               className="h-9 w-auto shrink-0 object-contain"
             />
           </Link>

@@ -1,6 +1,6 @@
-# Olla English — CRM
+# Mentora — CRM
 
-CRM intern pentru școala de limba engleză **Olla English**: elevi, grupe, orar, prezențe, plăți, recuperări, plus un portal de învățare pentru elevi.
+CRM intern pentru școala de limba engleză **Mentora**: elevi, grupe, orar, prezențe, plăți, recuperări.
 
 Nu există site public — rădăcina `/` redirecționează direct către ecranul de autentificare.
 
@@ -9,10 +9,8 @@ Nu există site public — rădăcina `/` redirecționează direct către ecranu
 | Rută            | Cine intră        | Ce face                                                                              |
 | --------------- | ----------------- | ------------------------------------------------------------------------------------ |
 | `/login`        | admin / profesor  | Autentificare (parolă + opțional 2FA, CAPTCHA la eșecuri repetate)                     |
-| `/admin`        | ADMIN, SUPERADMIN | Elevi, grupe, filiale, orar, sesiuni, plăți, recuperări, module, securitate, audit     |
-| `/teacher`      | TEACHER           | Grupele proprii, prezențe, recuperări, elevi, submisii                                 |
-| `/learn/[token]`| elev              | Module și lecții interactive, exerciții, gamification (acces pe bază de token)          |
-| `/learn/guest`  | oricine           | Mod demo, fără salvarea progresului                                                    |
+| `/admin`        | ADMIN, SUPERADMIN | Elevi, grupe, filiale, orar, sesiuni, plăți, recuperări, securitate, audit     |
+| `/teacher`      | TEACHER           | Grupele proprii, prezențe, recuperări, elevi                                         |
 
 ## Stack
 
@@ -55,7 +53,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"     # E
 | Variabilă        | Descriere                                            |
 | ---------------- | ---------------------------------------------------- |
 | `CRON_SECRET`    | Protejează `/api/cron/*` (rulate de Vercel Cron)      |
-| `TOTP_APP_NAME`  | Numele afișat în Google Authenticator (`Olla English`) |
+| `TOTP_APP_NAME`  | Numele afișat în Google Authenticator (`Mentora`) |
 
 ### Opționale
 
@@ -65,7 +63,6 @@ Fără ele aplicația funcționează, dar cu funcționalitatea respectivă dezac
 - **Rate limiting distribuit**: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` (fallback automat pe MongoDB)
 - **Upload imagini**: `BLOB_READ_WRITE_TOKEN` (Vercel Blob)
 - **Notificări Telegram**: `TELEGRAM_*` (boți, chat-uri, thread-uri)
-- **Corectare AI (Mr. Olla)**: `OPENAI_API_KEY`, `OPENAI_MODEL`, `AI_*`
 - **Tuning**: `SESSION_EXPIRATION_HOURS`, `ARGON2_*`, `AUDIT_LOG_RETENTION_DAYS`, `STEP_UP_TOKEN_EXPIRATION`
 
 Lista completă, cu comentarii, este în [.env.example](.env.example).
@@ -107,18 +104,17 @@ Fără topic-uri configurate aplicația funcționează normal — toate notific�
 | `npm run telegram:webhook` | Înregistrează webhook-ul Telegram (după deploy)     |
 | `npm run brand:icons`      | Regenerează favicon-urile și icoanele PWA           |
 
-Logo-ul folosit în interfață este `public/olla-english.png` — înlocuiește fișierul și se schimbă peste tot.
+Logo-ul folosit în interfață este `public/mentora.png` — înlocuiește fișierul și se schimbă peste tot.
 
 ## Model de date (esențial)
 
 - **User** — staff (SUPERADMIN / ADMIN / TEACHER), cu permisiuni granulare per modul
-- **Student** — elev; are opțional `accessToken` pentru portalul `/learn`
+- **Student** — elev
 - **Group** — grupă cu `level` (A1…C2, Kids, IELTS…), profesor, filială, orar
 - **GroupStudent** — pivot elev↔grupă cu lecții rămase, absențe, status
 - **LessonSession / Attendance / LessonTransaction** — lecții ținute și prezențe
 - **Payment** — plăți, cu snapshot de nume elev / grupă / nivel pentru istoric
 - **MakeupLesson** — recuperări
-- **LearningModule / Lesson / Problem / ProblemSubmission** — conținutul portalului elevului
 
 Nivelurile de engleză se editează într-un singur loc: [lib/english-levels.js](lib/english-levels.js).
 

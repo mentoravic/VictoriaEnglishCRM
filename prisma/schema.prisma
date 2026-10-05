@@ -1,4 +1,4 @@
-// Prisma schema for Olla English CRM - MongoDB
+// Prisma schema for Mentora CRM - MongoDB
 
 generator client {
   provider = "prisma-client-js"
@@ -1097,7 +1097,7 @@ model ProblemSubmission {
   solutionViewed Boolean @default(false) // elevul a apăsat „Vezi rezolvarea" (forțează 0p)
   locked         Boolean @default(false) // problemă blocată — nu se mai poate reîncerca
 
-  // AI grading (pentru CODING) — profesorul virtual „Mr. Olla"
+  // AI grading (pentru CODING) — profesorul virtual „profesorul virtual"
   aiGraded         Boolean  @default(false)
   aiReasoning      String?  // explicație pedagogică pentru elev (markdown)
   aiRubric         Json?    // {correctness, style, efficiency} cu scoruri 0-100
@@ -1128,7 +1128,7 @@ enum SubmissionStatus {
 }
 
 // ==================== AI USAGE TRACKING ====================
-// Tracking pentru rate limit + cost al apelurilor către OpenAI (Mr. Olla)
+// Tracking pentru rate limit + cost al apelurilor către OpenAI (profesorul virtual)
 
 model AiUsage {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -1148,7 +1148,7 @@ model AiUsage {
   @@map("ai_usage")
 }
 
-// Chat istoric: elev ↔ Mr. Olla (clarificări la o problemă)
+// Chat istoric: elev ↔ profesorul virtual (clarificări la o problemă)
 model AiChatMessage {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   studentId String   @db.ObjectId

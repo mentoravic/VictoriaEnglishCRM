@@ -1,5 +1,5 @@
 /**
- * Seed inițial pentru CRM-ul Olla English.
+ * Seed inițial pentru CRM-ul Mentora.
  *
  *   npm run db:seed
  *
@@ -20,13 +20,18 @@ const ARGON2_OPTIONS = {
   hashLength: 32,
 }
 
-const ADMIN_EMAIL = process.env.SEED_ADMIN_EMAIL || 'admin@ollaenglish.md'
-const ADMIN_PASSWORD = process.env.SEED_ADMIN_PASSWORD || 'Olla2026!'
-const TEACHER_EMAIL = process.env.SEED_TEACHER_EMAIL || 'profesor@ollaenglish.md'
-const TEACHER_PASSWORD = process.env.SEED_TEACHER_PASSWORD || 'Profesor2026!'
+const ADMIN_EMAIL = process.env.SEED_ADMIN_EMAIL
+const ADMIN_PASSWORD = process.env.SEED_ADMIN_PASSWORD
+const TEACHER_EMAIL = process.env.SEED_TEACHER_EMAIL
+const TEACHER_PASSWORD = process.env.SEED_TEACHER_PASSWORD
 
 async function main() {
-  console.log('🌱 Seed Olla English...')
+  console.log('🌱 Seed Mentora...')
+
+  if (!ADMIN_EMAIL || !ADMIN_PASSWORD || !TEACHER_EMAIL || !TEACHER_PASSWORD) {
+    console.error('❌ Setează SEED_ADMIN_EMAIL, SEED_ADMIN_PASSWORD, SEED_TEACHER_EMAIL și SEED_TEACHER_PASSWORD în .env')
+    process.exit(1)
+  }
 
   const existing = await prisma.user.count()
   if (existing > 0) {

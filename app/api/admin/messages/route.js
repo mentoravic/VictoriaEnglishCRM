@@ -10,7 +10,7 @@ import {
 import { getInbox, refreshInBackground, markConversationSeen } from '@/lib/meta-inbox'
 
 /**
- * Inboxul paginii Olla English — Messenger și Instagram la un loc.
+ * Inboxul paginii Mentora — Messenger și Instagram la un loc.
  *
  * GET                        → conversațiile din ambele platforme
  * GET ?conversation=<id>     → mesajele unei conversații

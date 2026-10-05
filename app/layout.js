@@ -22,14 +22,14 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Olla English",
-    template: "%s | Olla English"
+    default: "Mentora",
+    template: "%s | Mentora"
   },
-  description: "CRM intern Olla English — gestiune elevi, grupe, orar, prezențe și plăți.",
-  applicationName: "Olla English",
-  authors: [{ name: "Olla English" }],
-  creator: "Olla English",
-  publisher: "Olla English",
+  description: "CRM intern Mentora — gestiune elevi, grupe, orar, prezențe și plăți.",
+  applicationName: "Mentora",
+  authors: [{ name: "Mentora" }],
+  creator: "Mentora",
+  publisher: "Mentora",
   formatDetection: {
     email: false,
     address: false,
@@ -67,7 +67,7 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: 'cover',
-  themeColor: '#14276B',
+  themeColor: '#6A00F4',
   interactiveWidget: 'resizes-content',
 };
 

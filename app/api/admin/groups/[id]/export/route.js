@@ -284,7 +284,7 @@ function buildHtml(data) {
   )}` : ''}
 
   <footer>
-    Generat din Olla English CRM · ${esc(fmtDateTime(new Date()))}
+    Generat din Mentora CRM · ${esc(fmtDateTime(new Date()))}
   </footer>
 </body>
 </html>`

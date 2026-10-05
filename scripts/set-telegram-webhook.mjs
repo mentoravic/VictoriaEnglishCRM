@@ -5,7 +5,7 @@
  *   node scripts/set-telegram-webhook.mjs https://yourdomain.com
  * 
  * Exemplu:
- *   node scripts/set-telegram-webhook.mjs https://crm.ollaenglish.md
+ *   node scripts/set-telegram-webhook.mjs https://crm.mentora.md
  */
 
 import { readFileSync, existsSync } from 'fs'

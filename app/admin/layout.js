@@ -6,25 +6,25 @@ import AdminHeader from '@/components/admin/AdminHeader'
 import ImpersonationBanner from '@/components/ImpersonationBanner'
 
 export const metadata = {
-  title: 'Olla Admin',
-  description: 'Panou de administrare Olla English',
+  title: 'Mentora Admin',
+  description: 'Panou de administrare Mentora',
   manifest: '/manifest-admin.json',
   appleWebApp: {
     capable: true,
-    title: 'Olla Admin',
+    title: 'Mentora Admin',
     statusBarStyle: 'default',
   },
   other: {
     'mobile-web-app-capable': 'yes',
-    'application-name': 'Olla Admin',
+    'application-name': 'Mentora Admin',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Olla Admin',
+    'apple-mobile-web-app-title': 'Mentora Admin',
   },
 }
 
 export const viewport = {
-  themeColor: '#14276B',
+  themeColor: '#6A00F4',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',

@@ -27,7 +27,7 @@ const PERIODS = [
   { value: 'custom', label: 'Interval…' },
 ]
 
-const CACHE_KEY = 'olla:statistics:v1'
+const CACHE_KEY = 'mentora:statistics:v1'
 
 const int = (v) => Number(v || 0).toLocaleString('ro-RO')
 const money = (v) => `${Number(v || 0).toLocaleString('ro-RO')} MDL`

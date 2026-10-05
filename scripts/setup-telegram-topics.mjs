@@ -42,7 +42,6 @@ if (!TOKEN || !CHAT_ID) {
 const TOPICS = [
   { env: 'TELEGRAM_MISSED_LESSONS_THREAD_ID', name: '📅 Lecții ratate', color: 0xff93b2 },
   { env: 'TELEGRAM_LOW_LESSONS_THREAD_ID', name: '⏳ Ore rămase', color: 0xffd67e },
-  { env: 'TELEGRAM_PAYMENTS_THREAD_ID', name: '💰 Plăți', color: 0x6fb9f0 },
   { env: 'TELEGRAM_CONTACT_THREAD_ID', name: '📨 Contact / Lead-uri', color: 0x8eee98 },
   { env: 'TELEGRAM_ENROLLMENTS_THREAD_ID', name: '📝 Înscrieri', color: 0xcb86db },
   { env: 'TELEGRAM_TEACHER_ACTIVITIES_THREAD_ID', name: '👩‍🏫 Activitate profesori', color: 0x6fb9f0 },

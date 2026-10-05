@@ -55,7 +55,7 @@ const relativeTime = (iso) => {
   return new Date(iso).toLocaleString('ro-RO', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
 }
 
-const ADS_CACHE_KEY = 'olla:ads:v1'
+const ADS_CACHE_KEY = 'mentora:ads:v1'
 
 export default function AdsClient() {
   const router = useRouter()

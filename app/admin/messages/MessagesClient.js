@@ -33,7 +33,7 @@ const TABS = [
 ]
 
 const POLL_MS = 25000
-const STORE_KEY = 'olla:inbox'
+const STORE_KEY = 'mentora:inbox'
 const STORE_MAX_AGE = 10 * 60 * 1000
 
 /** Ultimul inbox văzut, ca pagina să apară desenată înainte de răspuns. */
@@ -48,7 +48,7 @@ const readStored = () => {
   }
 }
 
-const THREADS_KEY = 'olla:threads'
+const THREADS_KEY = 'mentora:threads'
 
 const readStoredThreads = () => {
   try {

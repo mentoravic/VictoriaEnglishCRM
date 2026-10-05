@@ -7,7 +7,7 @@ import { ArrowDownTrayIcon, CircleStackIcon, FolderOpenIcon } from '@heroicons/r
 /**
  * Backup complet al bazei de date pe calculator, din pagina de Securitate (doar SUPERADMIN).
  *
- * Prima dată alegi un folder (de ex. Documente); în el apare „Olla-CRM-Backup", cu câte un
+ * Prima dată alegi un folder (de ex. Documente); în el apare „Mentora-CRM-Backup", cu câte un
  * subfolder pe zi: 2026-10-02/Lead.json, Student.json … + _info.json. Un backup repetat în
  * aceeași zi actualizează folderul zilei. Se păstrează ultimele 30 de zile.
  * Restaurare: npm run db:restore -- "<calea către folderul zilei>"
@@ -15,14 +15,14 @@ import { ArrowDownTrayIcon, CircleStackIcon, FolderOpenIcon } from '@heroicons/r
  * Scrierea pe disc o face browserul (File System Access API) — merge în Chrome, Edge, Opera.
  */
 
-const ROOT_NAME = 'Olla-CRM-Backup'
+const ROOT_NAME = 'Mentora-CRM-Backup'
 const KEEP_DAYS = 30
-const LAST_KEY = 'olla-backup-last'
+const LAST_KEY = 'mentora-backup-last'
 
 // Folderul ales se ține minte în IndexedDB — localStorage nu poate păstra acces la foldere
 function idb(mode, fn) {
   return new Promise((resolve, reject) => {
-    const open = indexedDB.open('olla-backup', 1)
+    const open = indexedDB.open('mentora-backup', 1)
     open.onupgradeneeded = () => open.result.createObjectStore('handles')
     open.onerror = () => reject(open.error)
     open.onsuccess = () => {
@@ -124,7 +124,7 @@ export default function DatabaseBackup() {
   }, [])
 
   const pickFolder = async () => {
-    const handle = await window.showDirectoryPicker({ id: 'olla-backup', mode: 'readwrite', startIn: 'documents' })
+    const handle = await window.showDirectoryPicker({ id: 'mentora-backup', mode: 'readwrite', startIn: 'documents' })
     await saveFolder(handle)
     setFolder(handle)
     return handle

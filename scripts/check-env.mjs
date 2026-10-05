@@ -42,7 +42,7 @@ console.log('OBLIGATORII')
 
 if (!env.DATABASE_URL) fail('DATABASE_URL lipsește')
 else if (!/mongodb(\+srv)?:\/\/[^/]+\/[^/?]+/.test(env.DATABASE_URL))
-  fail('DATABASE_URL nu conține numele bazei de date (ex: .../ollaenglish?...)')
+  fail('DATABASE_URL nu conține numele bazei de date (ex: .../mentora?...)')
 else ok('DATABASE_URL')
 
 if (!env.NEXTAUTH_SECRET) fail('NEXTAUTH_SECRET lipsește')
@@ -77,7 +77,6 @@ if (tgBot && tgChat) {
   const threads = [
     'TELEGRAM_MISSED_LESSONS_THREAD_ID',
     'TELEGRAM_LOW_LESSONS_THREAD_ID',
-    'TELEGRAM_PAYMENTS_THREAD_ID',
     'TELEGRAM_CONTACT_THREAD_ID',
     'TELEGRAM_ENROLLMENTS_THREAD_ID',
     'TELEGRAM_TEACHER_ACTIVITIES_THREAD_ID',

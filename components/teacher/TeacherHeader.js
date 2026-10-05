@@ -17,10 +17,10 @@ export default function TeacherHeader({ user }) {
           {/* Mobile logo */}
           <Link href="/teacher" className="lg:hidden flex items-center gap-2">
             <Image
-              src="/olla-english.png"
-              alt="Olla English"
-              width={342}
-              height={103}
+              src="/mentora.png"
+              alt="Mentora"
+              width={2125}
+              height={740}
               className="h-9 w-auto shrink-0 object-contain"
             />
           </Link>

@@ -226,13 +226,13 @@ export default function LoginPage() {
       
       <div className="w-full max-w-md">
         {/* Logo */}
-        <div className="flex items-center justify-center mb-5 xs:mb-8">
+        <div className="flex items-center justify-center mb-2 xs:mb-4">
           <Image
-            src="/olla-english.png"
-            alt="Olla English"
-            width={342}
-            height={103}
-            className="h-12 xs:h-16 w-auto object-contain"
+            src="/mentora.png"
+            alt="Mentora"
+            width={2125}
+            height={740}
+            className="w-full max-w-[20rem] xs:max-w-md h-auto object-contain"
             priority
           />
         </div>
@@ -375,7 +375,7 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-4 xs:mt-6 text-center text-xs xs:text-sm text-gray-400">
-            Olla English · CRM intern
+            Mentora · CRM intern
           </p>
         </div>
       </div>

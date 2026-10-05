@@ -134,7 +134,7 @@ async function AdminDashboardContent() {
     <div className="space-y-5 xs:space-y-6 md:space-y-8">
       <div>
         <h1 className="text-lg xs:text-xl md:text-2xl font-bold text-gray-900">Dashboard</h1>
-        <p className="text-gray-600 text-xs xs:text-sm md:text-base">Bine ai venit în panoul de administrare Olla English!</p>
+        <p className="text-gray-600 text-xs xs:text-sm md:text-base">Bine ai venit în panoul de administrare Mentora!</p>
       </div>
 
       {!hasAnyPermission && (

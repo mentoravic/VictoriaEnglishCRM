@@ -50,7 +50,7 @@ const activeSelectClass =
 const pick = (active) => (active ? activeSelectClass : selectClass)
 
 // Filtrele rămân puse și după ce închizi pagina
-const FILTERS_KEY = 'olla:leads:filters'
+const FILTERS_KEY = 'mentora:leads:filters'
 
 const startOfToday = () => {
   const d = new Date()

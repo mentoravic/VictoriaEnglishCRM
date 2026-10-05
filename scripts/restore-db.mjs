@@ -1,7 +1,7 @@
 /**
  * Pune înapoi în MongoDB un backup făcut din admin (Securitate → Backup baza de date).
  *
- *   npm run db:restore -- "C:\Users\...\Olla-CRM-Backup\2026-10-02"
+ *   npm run db:restore -- "C:\Users\...\Mentora-CRM-Backup\2026-10-02"
  *   npm run db:restore -- "<folder>" --only Lead,LeadNote   # doar anumite colecții
  *   npm run db:restore -- "<folder>" --replace              # golește întâi colecțiile cu date
  *
@@ -32,7 +32,7 @@ const { values, positionals } = parseArgs({
 
 const dir = positionals[0]
 if (!dir) {
-  console.error('Folosire: npm run db:restore -- "<folderul zilei din Olla-CRM-Backup>" [--only A,B] [--replace]')
+  console.error('Folosire: npm run db:restore -- "<folderul zilei din Mentora-CRM-Backup>" [--only A,B] [--replace]')
   process.exit(1)
 }
 if (!process.env.DATABASE_URL) {

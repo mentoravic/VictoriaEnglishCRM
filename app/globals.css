@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Olla English — Design System (Olla English-inspired)
+   Mentora — Design System (Mentora-inspired)
    Dark teal + gold accent, modern, clean
 ───────────────────────────────────────────────────────────────────────────── */
 
@@ -107,7 +107,7 @@ html.light body {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   PWA / iOS Safe-Area + zoom prevention (preserved from Olla)
+   PWA / iOS Safe-Area + zoom prevention (preserved from the original design)
 ───────────────────────────────────────────────────────────────────────────── */
 @supports (-webkit-touch-callout: none) {
   input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),

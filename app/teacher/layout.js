@@ -6,25 +6,25 @@ import TeacherHeader from '@/components/teacher/TeacherHeader'
 import ImpersonationBanner from '@/components/ImpersonationBanner'
 
 export const metadata = {
-  title: 'Olla Profesor',
-  description: 'Panou profesor Olla English',
+  title: 'Mentora Profesor',
+  description: 'Panou profesor Mentora',
   manifest: '/manifest-teacher.json',
   appleWebApp: {
     capable: true,
-    title: 'Olla Profesor',
+    title: 'Mentora Profesor',
     statusBarStyle: 'default',
   },
   other: {
     'mobile-web-app-capable': 'yes',
-    'application-name': 'Olla Profesor',
+    'application-name': 'Mentora Profesor',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Olla Profesor',
+    'apple-mobile-web-app-title': 'Mentora Profesor',
   },
 }
 
 export const viewport = {
-  themeColor: '#14276B',
+  themeColor: '#6A00F4',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',

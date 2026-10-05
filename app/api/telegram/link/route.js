@@ -21,7 +21,7 @@ const TOKEN_TTL_MINUTES = 30
 const BOT_USERNAME =
   process.env.NEXT_PUBLIC_TELEGRAM_BOT_USERNAME ||
   process.env.TELEGRAM_BOT_USERNAME ||
-  "olla_english_bot"
+  ""
 
 async function requireUser() {
   const session = await getServerSession(authOptions)
